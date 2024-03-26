@@ -300,7 +300,7 @@ const Project = () => {
 
   function calculateContractSum(categoryId:any) {
     let totalPrice:any = 0;
-    if(projectScheduleData?.length!==null){
+    if(Array.isArray(projectScheduleData)){
       for (const product of projectScheduleData) {
         if (product?.projectId === categoryId) {
           totalPrice += product?.amount;
@@ -318,7 +318,7 @@ const Project = () => {
     let totalAmount:any = 0;
     console.log('projectActivityData:', projectActivityData);
     
-    if(projectActivityData?.length!==null){
+    if(Array.isArray(projectActivityData)){
       for (const projectActivity  of projectActivityData) {
         if (projectActivity?.projectId === id) {
           for (const subProduct of projectActivity?.projectActivityCosts) {

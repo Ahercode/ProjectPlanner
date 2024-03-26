@@ -34,6 +34,8 @@ export function AsideMenuMain() {
             <AsideMenuItem to='#' hasBullet={true} title='Summary'/>
           </AsideMenuItemWithSub>
 
+          <AsideMenuItem to='notifications/' icon='/media/icons/duotune/technology/teh004.svg' hasBullet={false} title='Notifications'/>
+
           <AsideMenuItemWithSub to='#' title="Setups" icon='/media/icons/duotune/technology/teh004.svg' hasBullet={false}>
             <AsideMenuItem to='projectCategories/' hasBullet={true} title='Project Categories'/>
             <AsideMenuItem to='projectTypes/' hasBullet={true} title='Project Types'/>

@@ -29,6 +29,7 @@ import { FinanceOptionSchedule } from '../modules/production/components/Entry/Fi
 import { CashFlow } from '../modules/production/components/Reports/CashFlowReport'
 import { Bank } from '../modules/production/components/Setup/Bank'
 import { PopaySchedule } from '../modules/production/components/PopaySchedule'
+import {Notification} from '../modules/notification/Notification'
 const accountBreadCrumbs: Array<PageLink> = [
   {
     title: '',
@@ -121,6 +122,15 @@ const PrivateRoutes = () => {
            <SuspensedView>
             <PageTitle breadcrumbs={accountBreadCrumbs}>All Project Categories</PageTitle>
              <ProjectCategory />
+           </SuspensedView>
+         }
+        />
+        <Route
+         path='notifications/*'
+         element={
+           <SuspensedView>
+            <PageTitle breadcrumbs={accountBreadCrumbs}>Notification Board</PageTitle>
+             <Notification />
            </SuspensedView>
          }
         />
