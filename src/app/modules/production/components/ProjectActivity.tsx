@@ -77,13 +77,29 @@ const ProjectActivity = () => {
       },
     },
     {
+      title: 'Contractor',
+      key: 'contractorId',
+      render: (row: any) => {
+        return getActivityname(row.contractorId)
+      },
+      sorter: (a: any, b: any) => {
+        if (a.contractorId > b.contractorId) {
+          return 1
+        }
+        if (b.contractorId > a.contractorId) {
+          return -1
+        }
+        return 0
+      },
+    },
+    {
       title: 'Action',
       fixed: 'right',
       width: 100,
       render: (_: any, record: any) => (
         <Space size='middle'>
           <Link to={`/project-activity-costs/${record.id}`}>
-            <span className='btn btn-light-info btn-sm'>Costs</span>
+            <span className='btn btn-light-info btn-sm'>Details</span>
           </Link>
           <a onClick={() => showUpdateModal(record)} className='btn btn-light-warning btn-sm'>
             Update
@@ -307,6 +323,19 @@ const ProjectActivity = () => {
                     {Activities?.data.map((item: any) => (
                         <option value={item.id}>{item.name}</option>
                     ))}
+                  </select>
+                </div>
+                <div className=' mb-7'>
+                  <label htmlFor="exampleFormControlInput1" className="form-label">Contractor</label>
+                  <select
+
+                    // onChange={handleChange}
+                    className="form-select form-select-solid" aria-label="Select example">
+                    {/*{isUpdateModalOpen === false ? <option>Select Activity</option> : null}*/}
+                    {/*{Activities?.data.map((item: any) => (*/}
+                    {/*    <option value={item.id}>{item.name}</option>*/}
+                    {/*))}*/}
+                    <option>Select Contractor</option>
                   </select>
                 </div>
                 

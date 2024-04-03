@@ -22,8 +22,7 @@ export function AsideMenuMain() {
             <AsideMenuItem to='invoices/' hasBullet={true} title='Invoices'/>
             <AsideMenuItem to='payments/' hasBullet={true} title='Payments'/>
             <AsideMenuItem to='finance-options/' hasBullet={true} title='Finance Option'/>
-          </AsideMenuItemWithSub> 
-          {/* <AsideMenuItem to='#' icon='/media/icons/duotune/finance/fin008.svg' hasBullet={false} title='Reports'/> */}
+          </AsideMenuItemWithSub>
 
           <AsideMenuItemWithSub to='#' icon='/media/icons/duotune/finance/fin008.svg' hasBullet={false} title='Reports'>
             <AsideMenuItem to='cashflow' hasBullet={true} title='Financial Projections'/>
